@@ -1,0 +1,43 @@
+li {
+  list-style: none;
+}
+
+.header-logo {
+  height: 40px;
+  border-bottom: 1px solid #dee7ec;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.account-box {
+  border: 1px solid #dee7ec;
+  border-radius: 10px;
+  margin-left: 100px;
+  padding: 10px;
+}
+
+.contents {
+  margin-top: 100px;
+}
+
+.content-box-linux {
+  float: left;
+  border: 1px solid #dee7ec;
+  border-radius: 10px;
+  padding-left: 10px;
+  height: 200px;
+  width: 200px;
+  margin-left: 10px;
+}
+
+.content-java {
+  clear: both;
+}
+
+.content-box-java {
+  border: 1px solid #dee7ec;
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin-left: 10px;
+}
