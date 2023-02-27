@@ -2,6 +2,10 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header-logo {
   height: 40px;
   border-bottom: 1px solid #dee7ec;
@@ -20,24 +24,43 @@ li {
   margin-top: 100px;
 }
 
-.content-box-linux {
-  float: left;
-  border: 1px solid #dee7ec;
-  border-radius: 10px;
-  padding-left: 10px;
-  height: 200px;
-  width: 200px;
-  margin-left: 10px;
+.contents h3 {
+  padding-top: 20px;
 }
 
-.content-java {
+.content {
   clear: both;
 }
 
-.content-box-java {
+.content-box {
+  float: left;
   border: 1px solid #dee7ec;
+  border-radius: 10px;
   height: 200px;
   width: 200px;
-  float: left;
   margin-left: 10px;
+  opacity: 0.75;
+}
+
+.content-box:hover {
+  opacity: 1;
+}
+
+.content-box a {
+  display: block;
+  height: 200px;
+}
+
+.content-box a h4 {
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 20px;
+  color: black;
+}
+
+footer {
+  clear: both;
+  margin-top: 100px;
+  border-top: 1px solid #dee7ec;
+  text-align: right;
 }
