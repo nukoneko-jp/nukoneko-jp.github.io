@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/report.css">
+    <title>Linuxコマンド集</title>
+</head>
+<body>
+    <header>
+        <div class="header-logo">ぬこねこノート</div>
+    </header>
+
+    <main>
+        <div class="top-wapper">
+            <h1>よく使うLinuxコマンド</h1>
+            <p>・サーバー構築のときに使ったコマンド集</p>
+        </div>
+
+        <h2>基本中の基本</h2>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>ls(現在地のファイル表示)</h3>
+            <code>
+            #ファイル一覧表示
+            <br>
+            $ ls
+            <br>
+            <br>
+            #ファイル情報一覧表示
+            <br>
+            $ ls -l
+        </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>cd(ディレクトリ移動)</h3>
+            <code>
+            #homeにディレクトリに移動
+            <br>
+            $ cd /home
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>pwd(現在地を表示する)</h3>
+            <code>
+                #現在地を表示
+                <br>
+                $ pwd
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>mkdir(ディレクトリ作成)</h3>
+            <code>
+                #「hoge」ディレクトリ作成
+                <br>
+                $ mkdir hoge
+                    </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>cp(ファイルをコピー)</h3>
+            <code>
+            #file1をfile2の名前でコピー
+            <br>
+            $ cp file1 file2
+            <br>
+            <br>
+            #file1をフォルダ内でfile2の名前でコピー
+            <br>
+            $ cp file1 /var/www/file2
+            <br>
+            <br>
+            #file1を強制的にコピー
+            <br>
+            cp -f file1 file2
+            </code>
+        </div>
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-logo">nukoneko</div>
+    </footer>
+</body>
+</html>
