@@ -6,16 +6,21 @@ a {
   text-decoration: none;
 }
 
+/* header {
+  height: 5px;
+  margin-bottom: 40px;
+  text-align: left;
+} */
+
 .header-logo {
-  height: 40px;
   border-bottom: 1px solid #dee7ec;
-  margin-bottom: 30px;
-  padding: 10px;
+  line-height: 5px;
 }
 
-footer {
+/* footer {
   clear: both;
   margin-top: 100px;
   border-top: 1px solid #dee7ec;
   text-align: right;
-}
+  height: 10px;
+} */

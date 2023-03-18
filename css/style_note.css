@@ -1,0 +1,42 @@
+.account-box {
+  border: 1px solid #dee7ec;
+  border-radius: 10px;
+  margin-left: 100px;
+  padding: 10px;
+}
+
+.contents {
+  margin-top: 100px;
+}
+
+.contents h3 {
+  padding-top: 20px;
+}
+
+.content {
+  clear: both;
+}
+
+.content-box {
+  float: left;
+  border: 1px solid #dee7ec;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  opacity: 1;
+}
+
+.content-box:hover {
+  opacity: 0.3;
+}
+
+.content-box a {
+  display: block;
+  height: 200px;
+  text-align: center;
+}
+
+.content-box a h4 {
+  display: inline-block;
+  color: black;
+}

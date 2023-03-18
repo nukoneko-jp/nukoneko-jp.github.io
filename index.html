@@ -3,67 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/common.css">
     <title>ぬこねこのお部屋</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="js/fixmenu_pagetop.js"></script>
 </head>
+
 <body>
+    <div id="splash">
+        <div id="splash_text"></div>
+        <div class="loader_cover loader_cover-up"></div><!--上に上がるエリア-->
+        <div class="loader_cover loader_cover-down"></div><!--下に下がるエリア-->
+        <!--/splash-->
+    </div>
+    <div id="containers">
+    </div>
+
     <header>
-        <div class="header-logo">ぬこねこノート</div>
+        <a href="#" id="new">新規登録</a>
+        <a href="#" id="login">ログイン</a>
+
+        <nav id="menubar">
+            <ul>
+                <li><a href="#news">やったこと</a></li>
+                <li><a href="#Apps">メモについて</a></li>
+                <li><a href="#use">使えそうなもの</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div class="account-box">
-            <h1><img src="#" alt=""></h1>
-            <h2>ぬこねこ</h2>
-            <p>あくまで個人用のメモです。</p>
+    <div id="container">
+
+        <div id="contents">
+
+            <section id="news">
+
+                <h2>やったこと</h2>
+                <dl style="margin-left: 1%;">
+                    <hr>
+                    <dt>2023/01/20</dt>
+                    <dd>Linuxサーバーにぶち込んでみた <span class="newicon">NEW</span></dd>
+                    <hr>
+                    <dt>2023/01/02</dt>
+                    <dd>各種機能を結合</dd>
+                    <hr>
+                    <dt>2022/12/10</dt>
+                    <dd>ログイン機能を作成</dd>
+                    <hr>
+                    <dt>2022/10/17</dt>
+                    <dd>Spring Framework勉強開始</dd>
+                    <hr>
+                </dl>
+            </section>
+
+            <section id="Apps">
+                <h2>メモについて</h2>
+
+                <h3>ぬこねこノート</h3>
+                <p> <a href="book.html">ノートを見る</a> </p>
+
+                <h3>便利なもの</h3>
+                <p><a href="#">ファイル共有ソフト</a></p>
+
+                <h3>その他</h3>
+                <p><a href="#">来客用メニュー表</a></p>
+
+                <section id="use">
+
+                    <h2>使えそうなもの</h2>
+
+                    <h3>使った形跡があるもの</h3>
+                    <p>・フレームワーク...Spring Framework, Servlet/JSP, Node.js <br>
+                        ・言語...Java,html,css,JavaScript,SQL <br>
+                        ・データベース...MySQL, PostgreSQL ,H2Database <br>
+                        ・サーバー系...Ubuntu(ver??),Apache, openSSH, BIND, Postfix, Dovecot, SAMBA<br>
+                        ・デザイン系...Bootstrap, Jquery <br>
+                        ・エディタ...VScode <br>
+                    </p>
+                </section>
+            </section>
         </div>
-
-        <div class="contents">
-            <div class="content">
-                <h3>Linux系</h3>
-                <div class="content-box">
-                    <a href="report/report.html">
-                        <h4>Linuxコマンド集</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="content">
-                <h3>Java</h3>
-                <div class="content-box">
-                    <a href="">
-                        <h4>サーバー構築</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="content">
-                <h3>HTML,CSS</h3>
-                <div class="content-box">
-                    <a href="">
-                        <h4>サーバー構築</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="content">
-                <h3>JavaScript</h3>
-                <div class="content-box">
-                    <a href="">
-                        <h4>サーバー構築</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="content">
-            </div>
-        </div>
-    </main>
+    </div>
 
     <footer>
-        <div class="footer-logo">nukoneko</div>
     </footer>
+    <!--jQueryファイルの読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--ページの上部へ戻るボタンとスクリプト-->
+    <p class="scroll"><a href="#"><img src="images/top-button.png" alt=""></a></p>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>
