@@ -11,10 +11,22 @@ main {
   position: relative;
 }
 
-.main-visual h1 {
+.main-theme h1 {
+  width: 350px;
   position: absolute;
-  top: 46%;
-  left: 46%;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border: cornsilk solid 5px;
+  color: cornsilk;
+  margin: 0;
+  font-size: 100px;
+  font-weight: 900;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5;
+  padding: 20px;
 }
 
 .content-wappar {
