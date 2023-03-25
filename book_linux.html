@@ -84,7 +84,62 @@
             <br>
             #file1を強制的にコピー
             <br>
-            cp -f file1 file2
+            $ cp -f file1 file2
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>mv(ファイル移動)</h3>
+            <code>
+                #file1をwww内に移動
+                <br>
+                $ mv file1 /var/www/
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>mv(ファイル名変更)</h3>
+            <code>
+                #file1をfile2に名前変更
+                <br>
+                $ mv file1 file2
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>rm(ファイル削除)</h3>
+            <code>
+                    #file1を削除
+                    <br>
+                    $ rm file1
+                    <br>
+                    #ディレクトリも削除対象とする
+                    <br>
+                    $ rm -r file1
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>scp(ファイル転送(ssh設定済み))</h3>
+            <code>
+                #ローカルからリモートのホームに
+                <br>
+                scp file.txt user@192.168.x.x:~/
+                <br>
+                <br>
+                #リモートからローカルのカレントに
+                <br>
+                scp user@192.168.x.x:~/file.txt ./
+                <br>
+                <br>
+                -i 鍵ファイルを指定
+                <br>
+                -p 使用するポート番号を指定
+
             </code>
         </div>
 
