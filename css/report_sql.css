@@ -1,0 +1,34 @@
+h1,
+h2,
+h3,
+h4,
+p,
+code {
+  display: block;
+  text-align: center;
+}
+
+code {
+  background-color: black;
+  border-radius: 10px;
+  font-size: large;
+  color: #fff;
+  text-align: left;
+}
+
+main {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contents-wapper {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    width: 100%;
+  }
+}
