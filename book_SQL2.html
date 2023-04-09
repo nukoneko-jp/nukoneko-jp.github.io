@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/report_sql.css">
+    <title>SQL基本構文2</title>
+</head>
+<body>
+    <header>
+        <!-- <div class="header-logo">
+            <p>ぬこねこノート</p>
+        </div> -->
+    </header>
+
+    <main>
+        <div class="top-wapper">
+            <h1>SQL基本構文2</h1>
+            <p>・よく使うSQL基本構文2</p>
+        </div>
+
+        <h2>SQL基本2</h2>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>DISTINCT</h3>
+            <code>
+                <br>
+                -- 重複を除いたデータを取得
+                <br>
+                SELECT DISTINCT(name)
+                <br>
+                <br>
+        </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>四則演算</h3>
+            <code>
+                <br>
+                --計算できる
+                <br>
+                SELECT name, price * 1.08
+                <br>
+                <br>
+            </code>
+        </div>
+
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>集約関数</h3>
+            <code>
+                <br>
+                -- 合計が出る
+                <br>
+                SELECT SUM(price)
+                <br>
+                FROM
+                <br>
+                WHERE name = "ぷりん"
+                <br>
+                <br>
+                -- 平均が出る
+                <br>
+                SELECT AVG(price)
+                <br>
+                FROM
+                <br>
+                WHERE name = "ぷりん"
+                <br>
+                <br>
+                -- データの数を数えるnullは数えられない
+                <br>
+                SELECT COUNT(price)
+                <br>
+                FROM
+                <br>
+                WHERE name = "ぷりん"
+                <br>
+                <br>
+                -- nullまで数えてくれる
+                <br>
+                SELECT COUNT(*)
+                <br>
+                FROM
+                <br>
+                WHERE name = "ぷりん"
+                <br>
+                <br>
+                -- 最大値を取得する
+                <br>
+                SELECT MAX(price)
+                <br>
+                FROM
+                <br>
+                WHERE name = "ぷりん"
+                <br>
+                <br>
+                -- 最小値を取得する
+                <br>
+                SELECT MIN(price)
+                <br>
+                FROM
+                <br>
+                WHERE name = "ぷりん"
+                <br>
+                <br>
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>GROUP BY</h3>
+            <p>※集約関数を使わないと使えない</p>
+            <p>※SELECTに無いカラムは扱えない</p>
+            <code>
+                <br>
+                -- 日ごとにグループを作って合計する
+                <br>
+                SELECT SUM(price), day
+                <br>
+                FROM
+                <br>
+                GROUP BY day
+                <br>
+                <br>
+                結果例
+                <br>
+                "7000 | 2017-07-01"
+                <br>
+                "7500 | 2017-07-02"
+                <br>
+                <br>
+                -- 名前と日付が一致するデータを合計したデータを出す
+                <br>
+                SELECT SUM(price), day, name
+                <br>
+                FROM
+                <br>
+                GROUP BY day, name
+                <br>
+                <br>
+                結果例
+                <br>
+                "7000 | 2017-07-01 | hoge"
+                <br>
+                "7500 | 2017-07-02 | piyo"
+                <br>
+                "8000 | 2017-07-03 | hoge"
+                <br>
+                <br>
+                -- ある人が使った合計金額が日ごとに表示される
+                <br>
+                -- WHERE → GROUP BY → 関数の順に実行される
+                <br>
+                SELECT SUM(price), day
+                <br>
+                FROM
+                <br>
+                WHERE name = "hoge"
+                <br>
+                GROUP BY day
+                <br>
+                <br>
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>HAVING</h3>
+            <code>
+                <br>
+                -- グループの中をさらに絞るときに使う WHEREは全体
+                <br>
+                -- WHERE → GROUP BY → 関数 → HAVINGの順
+                <br>
+                -- 必ずグループ化されたカラムを使用する
+                <br>
+                <br>
+
+                --日ごとに→合計した価格をさらに1000未満の価格と日を出す
+                <br>
+                SELECT SUM(price), day
+                <br>
+                FROM
+                <br>
+                GROUP BY day
+                <br>
+                HAVING SUM(price) > 1000
+                <br>
+                <br>
+                --雑貨でキャラ名ごとに値段の合計を出す
+                <br>
+                SELECT SUM(price), name
+                <br>
+                FROM
+                <br>
+                WHERE category = "雑費"
+                <br>
+                GROUP BY character_name
+                <br>
+                <br>
+            </code>
+        </div>
+    </main>
+
+    <footer>
+        <!-- <div class="footer-logo">nukoneko</div> -->
+    </footer>
+</body>
+</html>

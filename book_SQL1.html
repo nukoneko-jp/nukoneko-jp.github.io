@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/report_sql.css">
+    <title>SQL基本構文1</title>
+</head>
+<body>
+    <header>
+        <!-- <div class="header-logo">
+            <p>ぬこねこノート</p>
+        </div> -->
+    </header>
+
+    <main>
+        <div class="top-wapper">
+            <h1>SQL基本構文1</h1>
+            <p>・よく使うSQL基本構文1</p>
+        </div>
+
+        <h2>SQL基本1</h2>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>SELECT</h3>
+            <code>
+                <br>
+                SELECT *
+                <br>
+                SELECT name, price
+                <br>
+                <br>
+        </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>WHERE</h3>
+            <code>
+                <br>
+                -- 食費を探す
+                <br>
+                WHERE category = "食費";
+                <br>
+                <br>
+                -- 1000以上のデータを検索する
+                <br>
+                WHERE price >= 1000;
+                <br>
+                <br>
+                --"2017-07-01"を検索
+                <br>
+                WHERE day = "2017-07-01";
+                <br>
+                <br>
+                -- 2017-07-01以前のデータを検索
+                <br>
+                WHERE day <= "2017-07-01" ;
+                <br>
+                <br>
+            </code>
+        </div>
+
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>LIKE</h3>
+            <code>
+                <br>
+                -- 前後のワイルドカードでプリンを含むデータを全て取得する
+                <br>
+                WHERE name LIKE "%プリン%";
+                <br>
+                <br>
+                -- プリンで始まるデータを取得する #プリン、プリンパフェ"
+                <br>
+                WHERE name LIKE "プリン%";
+                <br>
+                <br>
+                -- プリンで終わるデータを取得する #プリン、牛乳プリン
+                <br>
+                WHERE name LIKE "%プリン";
+                <br>
+                <br>
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>NOT</h3>
+            <code>
+                <br>
+                -- 1000以上のデータを満たさないデータを取得する
+                <br>
+                WHERE NOT price > 1000;
+                <br>
+                <br>
+                -- 条件を満たさないデータを取得できる
+                <br>
+                WHERE NOT name LIKE "%プリン%"
+                <br>
+                <br>
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>NULL</h3>
+            <code>
+                <br>
+                -- 指定したカラムのデータがNULLである物を取得
+                <br>
+                WHERE price IS NULL;
+                <br>
+                <br>
+                -- 指定したカラムのデータがNULLではない物を取得する
+                <br>
+                WHERE price IS NOT NULL
+                <br>
+                <br>
+                -- NULLの物を取得
+                <br>
+                WHERE price = NULL;
+                <br>
+                <br>
+                -- NULLではないものを取得する
+                <br>
+                WHERE NOT price = NULL;
+                <br>
+                <br>
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>AND, OR</h3>
+            <code>
+                <br>
+                -- #二つが一致するデータを検索
+                <br>
+                WHERE name = "hoge"
+                <br>
+                AND category = "食費";
+                <br>
+                <br>
+                -- 何方かが一致するデータを検索
+                <br>
+                WHERE name = "hoge"
+                <br>
+                OR category = "食費";
+                <br>
+                <br>
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>ORDER BY</h3>
+            <code>
+                <br>
+                ASC...昇順 1,2,3,4
+                <br>
+                DESC...降順 4,3,2,1
+                <br>
+                <br>
+                -- 降順に並べる
+                <br>
+                SELECT *
+                <br>
+                FROM
+                <br>
+                ORDER BY DESC;
+                <br>
+                <br>
+                -- 昇順に並べる
+                <br>
+                SELECT *
+                <br>
+                FROM
+                <br>
+                WHERE name = "hoge"
+                <br>
+                ORDER BY price DESC;
+                <br>
+                <br>
+            </code>
+        </div>
+
+        <div class="contents-wapper">
+            <hr>
+            <h3>LIMIT</h3>
+            <code>
+                <br>
+                "#5行だけ表示させる"
+                <br>
+                SELECT *
+                <br>
+                FROM
+                <br>
+                WHERE
+                <br>
+                LIMIT 5;
+                <br>
+                <br>
+            </code>
+        </div>
+    </main>
+
+    <footer>
+        <!-- <div class="footer-logo">nukoneko</div> -->
+    </footer>
+</body>
+</html>
